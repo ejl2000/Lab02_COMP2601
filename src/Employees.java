@@ -25,28 +25,24 @@ public class Employees
         parents = new ArrayList<>();
         gasStationAttendants = new ArrayList<>();
 
-        // Adding HockeyPlayers
         hockeyPlayers.add(new HockeyPlayer("Wayne Gretzky", 894));
         hockeyPlayers.add(new HockeyPlayer("Who Ever", 0));
         hockeyPlayers.add(new HockeyPlayer("Brent Gretzky", 1));
         hockeyPlayers.add(new HockeyPlayer("Pavel Bure", 437));
         hockeyPlayers.add(new HockeyPlayer("Jason Wilder", 0));
 
-        // Adding Professors
         professors.add(new Professor("Albert Einstein", "Physics"));
         professors.add(new Professor("Jason Wilder", "Computer Systems"));
         professors.add(new Professor("Richard Feynman", "Physics"));
         professors.add(new Professor("BCIT Instructor", "Computer Systems"));
         professors.add(new Professor("Kurt Godel", "Logic"));
 
-        // Adding Parents
         parents.add(new Parent("Tiger Woods", 1));
         parents.add(new Parent("Super Mom", 168));
         parents.add(new Parent("Lazy Larry", 20));
         parents.add(new Parent("Ex Hausted", 168));
         parents.add(new Parent("Super Dad", 167));
 
-        // Adding GasStationAttendants
         gasStationAttendants.add(new GasStationAttendant("Joe Smith", 10));
         gasStationAttendants.add(new GasStationAttendant("Tony Baloney", 100));
         gasStationAttendants.add(new GasStationAttendant("Benjamin Franklin", 100));
