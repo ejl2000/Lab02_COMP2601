@@ -21,30 +21,45 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
         this.numberOfDollarsStolenPerDay = numberOfDollarsStolenPerDay;
     }
 
+    /**
+     * Gets the dress code of the gas station attendant.
+     */
     @Override
     public String getDressCode()
     {
         return "uniform";
     }
 
+    /**
+     * Determines whether the gas station attendant is paid or not.
+     */
     @Override
     public boolean isPaidSalary()
     {
         return false;
     }
 
+    /**
+     * Determines whether the gas station attendant requires post-secondary education. .
+     */
     @Override
     public boolean postSecondaryEducationRequired()
     {
         return false;
     }
 
+    /**
+     * Determines the work that the gas attendant does.
+     */
     @Override
     public String getWorkVerb()
     {
         return "pump";
     }
 
+    /**
+     * Gets the over time pay rate of the gas station attendant.
+     */
     @Override
     public double getOverTimePayRate()
     {
