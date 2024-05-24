@@ -9,7 +9,8 @@ public abstract class Employee implements Employable
     /**
      * The name of the employee.
      */
-    protected String name;
+    protected final String name;
+    private static final int HASHCODE_SUCCESS = 0;
 
     /**
      * Constructs an Employee with the given name.
@@ -36,6 +37,6 @@ public abstract class Employee implements Employable
     @Override
     public int hashCode()
     {
-        return 0;
+        return HASHCODE_SUCCESS;
     }
 }

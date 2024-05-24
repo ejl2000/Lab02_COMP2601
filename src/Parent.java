@@ -5,10 +5,8 @@
  */
 public class Parent extends Employee implements Comparable<Parent>
 {
-    /**
-     * The number of hours spent with kids weekly.
-     */
-    private int weeklyHoursWithKids;
+    protected final int weeklyHoursWithKids;
+    private static final double OVERTIME_PAY_RATE = -2.0;
 
     /**
      * Constructs a Parent with the given name and weekly hours spent with kids.
@@ -49,7 +47,7 @@ public class Parent extends Employee implements Comparable<Parent>
     @Override
     public double getOverTimePayRate()
     {
-        return -2.0;
+        return OVERTIME_PAY_RATE;
     }
 
     /**

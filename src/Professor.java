@@ -5,10 +5,11 @@
  */
 public class Professor extends Employee implements Comparable<Professor>
 {
-    /**
-     * The major subject taught by the professor.
-     */
-    private final String teachingMajor;
+    protected final String teachingMajor;
+    private static final double OVERTIME_PAY_RATE = 2.0;
+    private static final int HIGHER_RANK = -1;
+    private static final int LOWER_RANK = 1;
+    private static final int EQUAL_RANK = 0;
 
     /**
      * Constructs a Professor with the given name and teaching major.
@@ -65,7 +66,7 @@ public class Professor extends Employee implements Comparable<Professor>
     @Override
     public double getOverTimePayRate()
     {
-        return 2.0;
+        return OVERTIME_PAY_RATE;
     }
 
     /**
@@ -79,15 +80,15 @@ public class Professor extends Employee implements Comparable<Professor>
     {
         if (this.teachingMajor.equals("Computer Systems") && !other.teachingMajor.equals("Computer Systems"))
         {
-            return -1;
+            return HIGHER_RANK;
         }
         else if (!this.teachingMajor.equals("Computer Systems") && other.teachingMajor.equals("Computer Systems"))
         {
-            return 1;
+            return LOWER_RANK;
         }
         else
         {
-            return 0;
+            return EQUAL_RANK;
         }
     }
 

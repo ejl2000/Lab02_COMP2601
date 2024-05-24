@@ -6,10 +6,8 @@
  */
 public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer>
 {
-    /**
-     * The number of goals scored by the hockey player.
-     */
-    private int numberOfGoals;
+    protected final int numberOfGoals;
+    private static final double OVERTIME_PAY_RATE = 0.0;
 
     /**
      * Constructs a HockeyPlayer with the given name and number of goals.
@@ -65,7 +63,7 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer>
     @Override
     public double getOverTimePayRate()
     {
-        return 0.0;
+        return OVERTIME_PAY_RATE;
     }
 
     /**

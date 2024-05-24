@@ -6,10 +6,8 @@
  */
 public class GasStationAttendant extends Employee implements Comparable<GasStationAttendant>
 {
-    /**
-     * The amount of money stolen per day by the gas station attendant.
-     */
-    private double numberOfDollarsStolenPerDay;
+    protected final double numberOfDollarsStolenPerDay;
+    private static final double OVERTIME_PAY_RATE = 1.5;
 
     /**
      * Constructs a GasStationAttendant with the given name and amount of money stolen per day.
@@ -50,7 +48,7 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
     @Override
     public double getOverTimePayRate()
     {
-        return 1.5;
+        return OVERTIME_PAY_RATE;
     }
 
     /**
