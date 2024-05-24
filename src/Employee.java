@@ -27,4 +27,15 @@ public abstract class Employee implements Employable
      * @return the overtime pay rate as a double.
      */
     public abstract double getOverTimePayRate();
+
+    /**
+     * Returns a hash code value for the object.
+     *
+     * @return a hash code value for this object.
+     */
+    @Override
+    public int hashCode()
+    {
+        return 0;
+    }
 }

@@ -8,7 +8,7 @@ public class Professor extends Employee implements Comparable<Professor>
     /**
      * The major subject taught by the professor.
      */
-    private String teachingMajor;
+    private final String teachingMajor;
 
     /**
      * Constructs a Professor with the given name and teaching major.
