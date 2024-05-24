@@ -24,7 +24,7 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer>
     }
 
     /**
-     * Overrides the getDressCode method with proper property.
+     * Gets the dress code of the hockey player.
      */
     @Override
     public String getDressCode()
@@ -33,7 +33,7 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer>
     }
 
     /**
-     * Overrides the isPaidSalary method with proper property.
+     * Determines whether the hockey player is paid or not.
      */
     @Override
     public boolean isPaidSalary()
@@ -42,7 +42,7 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer>
     }
 
     /**
-     * Overrides the postSecondaryEducationRequired method with proper property.
+     * Determines whether the hockey player needs post secondary education.
      */
     @Override
     public boolean postSecondaryEducationRequired()
@@ -51,7 +51,7 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer>
     }
 
     /**
-     * Overrides the getWorkVerb method with proper property.
+     * Determines the work that the hockey player does.
      */
     @Override
     public String getWorkVerb()
@@ -60,7 +60,7 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer>
     }
 
     /**
-     * Overrides the getOverTimePayRate method with proper property.
+     * Gets the over time pay rate of the hockey player.
      */
     @Override
     public double getOverTimePayRate()
@@ -98,6 +98,7 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer>
 
     /**
      * Returns a hash code value for the object.
+     *
      * @return a hash code value for this object.
      */
     @Override
