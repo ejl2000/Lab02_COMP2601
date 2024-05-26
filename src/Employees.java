@@ -131,7 +131,7 @@ public class Employees
     }
 
     /**
-     * The main method to run the Employees class.
+     * The main method that runs the Employees class.
      *
      * @param args the command line arguments.
      */
