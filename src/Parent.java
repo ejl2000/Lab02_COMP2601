@@ -6,7 +6,13 @@
 public class Parent extends Employee implements Comparable<Parent>
 {
     protected final int weeklyHoursWithKids;
-    private static final double OVERTIME_PAY_RATE = -2.0;
+
+    private static final String  DRESS_CODE                        = "anything";
+    private static final boolean IS_PAID_SALARY                    = false;
+    private static final boolean POST_SECONDARY_EDUCATION_REQUIRED = false;
+    private static final String  WORK_VERB                         = "care";
+    private static final double  OVER_TIME_PAY_RATE                = -2.0;
+    private static final boolean GETS_PAID                         = false;
 
     /**
      * Constructs a Parent with the given name and weekly hours spent with kids.
@@ -14,40 +20,42 @@ public class Parent extends Employee implements Comparable<Parent>
      * @param name the name of the parent.
      * @param weeklyHoursWithKids the number of hours the parent spends with kids weekly.
      */
-    public Parent(final String name, final int weeklyHoursWithKids)
+    public Parent(final String name,
+                  final int weeklyHoursWithKids)
     {
         super(name);
+
         this.weeklyHoursWithKids = weeklyHoursWithKids;
     }
 
     @Override
     public String getDressCode()
     {
-        return "anything";
+        return DRESS_CODE;
     }
 
     @Override
     public boolean isPaidSalary()
     {
-        return false;
+        return IS_PAID_SALARY;
     }
 
     @Override
     public boolean postSecondaryEducationRequired()
     {
-        return false;
+        return POST_SECONDARY_EDUCATION_REQUIRED;
     }
 
     @Override
     public String getWorkVerb()
     {
-        return "care";
+        return WORK_VERB;
     }
 
     @Override
     public double getOverTimePayRate()
     {
-        return OVERTIME_PAY_RATE;
+        return OVER_TIME_PAY_RATE;
     }
 
     /**
@@ -58,7 +66,7 @@ public class Parent extends Employee implements Comparable<Parent>
     @Override
     public boolean getsPaid()
     {
-        return false;
+        return GETS_PAID;
     }
 
     /**
@@ -70,7 +78,7 @@ public class Parent extends Employee implements Comparable<Parent>
     @Override
     public int compareTo(final Parent other)
     {
-        return Integer.compare(other.weeklyHoursWithKids, this.weeklyHoursWithKids);
+        return Integer.compare(this.weeklyHoursWithKids, other.weeklyHoursWithKids);
     }
 
     /**

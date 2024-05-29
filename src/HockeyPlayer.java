@@ -7,7 +7,12 @@
 public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer>
 {
     protected final int numberOfGoals;
-    private static final double OVERTIME_PAY_RATE = 0.0;
+
+    private static final String  DRESS_CODE                        = "jersey";
+    private static final boolean IS_PAID_SALARY                    = true;
+    private static final boolean POST_SECONDARY_EDUCATION_REQUIRED = false;
+    private static final String  WORK_VERB                         = "play";
+    private static final double  OVER_TIME_PAY_RATE                = 0.0;
 
     /**
      * Constructs a HockeyPlayer with the given name and number of goals.
@@ -15,7 +20,8 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer>
      * @param name the name of the hockey player.
      * @param numberOfGoals the number of goals scored by the hockey player.
      */
-    public HockeyPlayer(final String name, final int numberOfGoals)
+    public HockeyPlayer(final String name,
+                        final int numberOfGoals)
     {
         super(name);
         this.numberOfGoals = numberOfGoals;
@@ -27,7 +33,7 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer>
     @Override
     public String getDressCode()
     {
-        return "jersey";
+        return DRESS_CODE;
     }
 
     /**
@@ -36,7 +42,7 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer>
     @Override
     public boolean isPaidSalary()
     {
-        return true;
+        return IS_PAID_SALARY;
     }
 
     /**
@@ -45,7 +51,7 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer>
     @Override
     public boolean postSecondaryEducationRequired()
     {
-        return false;
+        return POST_SECONDARY_EDUCATION_REQUIRED;
     }
 
     /**
@@ -54,7 +60,7 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer>
     @Override
     public String getWorkVerb()
     {
-        return "play";
+        return WORK_VERB;
     }
 
     /**
@@ -63,7 +69,7 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer>
     @Override
     public double getOverTimePayRate()
     {
-        return OVERTIME_PAY_RATE;
+        return OVER_TIME_PAY_RATE;
     }
 
     /**
@@ -75,7 +81,7 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer>
     @Override
     public int compareTo(final HockeyPlayer other)
     {
-        return Integer.compare(other.numberOfGoals, this.numberOfGoals);
+        return Integer.compare(this.numberOfGoals, other.numberOfGoals);
     }
 
     /**

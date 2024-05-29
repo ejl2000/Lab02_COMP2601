@@ -6,10 +6,15 @@
 public class Professor extends Employee implements Comparable<Professor>
 {
     protected final String teachingMajor;
-    private static final double OVERTIME_PAY_RATE = 2.0;
-    private static final int HIGHER_RANK = -1;
-    private static final int LOWER_RANK = 1;
-    private static final int EQUAL_RANK = 0;
+
+    private static final String  DRESS_CODE                        = "fancy";
+    private static final boolean IS_PAID_SALARY                    = true;
+    private static final boolean POST_SECONDARY_EDUCATION_REQUIRED = true;
+    private static final String  WORK_VERB                         = "teach";
+    private static final double  OVER_TIME_PAY_RATE                = 2.0;
+    private static final int     HIGHER_RANK                       = -1;
+    private static final int     LOWER_RANK                        = 1;
+    private static final int     EQUAL_RANK                        = 0;
 
     /**
      * Constructs a Professor with the given name and teaching major.
@@ -17,9 +22,11 @@ public class Professor extends Employee implements Comparable<Professor>
      * @param name the name of the professor.
      * @param teachingMajor the teaching major of the professor.
      */
-    public Professor(final String name, final String teachingMajor)
+    public Professor(final String name,
+                     final String teachingMajor)
     {
         super(name);
+
         this.teachingMajor = teachingMajor;
     }
 
@@ -30,7 +37,7 @@ public class Professor extends Employee implements Comparable<Professor>
     @Override
     public String getDressCode()
     {
-        return "fancy";
+        return DRESS_CODE;
     }
 
     /**
@@ -39,7 +46,7 @@ public class Professor extends Employee implements Comparable<Professor>
     @Override
     public boolean isPaidSalary()
     {
-        return true;
+        return IS_PAID_SALARY;
     }
 
     /**
@@ -48,7 +55,7 @@ public class Professor extends Employee implements Comparable<Professor>
     @Override
     public boolean postSecondaryEducationRequired()
     {
-        return true;
+        return POST_SECONDARY_EDUCATION_REQUIRED;
     }
 
     /**
@@ -57,7 +64,7 @@ public class Professor extends Employee implements Comparable<Professor>
     @Override
     public String getWorkVerb()
     {
-        return "teach";
+        return WORK_VERB;
     }
 
     /**
@@ -66,7 +73,7 @@ public class Professor extends Employee implements Comparable<Professor>
     @Override
     public double getOverTimePayRate()
     {
-        return OVERTIME_PAY_RATE;
+        return OVER_TIME_PAY_RATE;
     }
 
     /**

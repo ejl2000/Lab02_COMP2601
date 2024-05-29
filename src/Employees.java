@@ -8,21 +8,22 @@ import java.util.*;
  */
 public class Employees
 {
-    private final List<HockeyPlayer> hockeyPlayers;
-    private final List<Professor> professors;
-    private final List<Parent> parents;
-    private List<GasStationAttendant> gasStationAttendants;
+    private final List<HockeyPlayer>        hockeyPlayers;
+    private final List<Professor>           professors;
+    private final List<Parent>              parents;
+    private final List<GasStationAttendant> gasStationAttendants;
+
     private static final int INITIAL_VALUE = 0;
-    private static final int ADD_VALUE = 1;
+    private static final int ADD_VALUE     = 1;
 
     /**
      * Constructs an Employees object and initializes the employee lists.
      */
     public Employees()
     {
-        hockeyPlayers = new ArrayList<>();
-        professors = new ArrayList<>();
-        parents = new ArrayList<>();
+        hockeyPlayers        = new ArrayList<>();
+        professors           = new ArrayList<>();
+        parents              = new ArrayList<>();
         gasStationAttendants = new ArrayList<>();
 
         hockeyPlayers.add(new HockeyPlayer("Wayne Gretzky", 894));

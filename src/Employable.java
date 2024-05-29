@@ -35,7 +35,7 @@ public interface Employable
     public String getWorkVerb();
 
     /**
-     * Checks if the employable entity gets paid.
+     * Indicates if the employable entity gets paid.
      *
      * @return true if the entity gets paid, false otherwise.
      */

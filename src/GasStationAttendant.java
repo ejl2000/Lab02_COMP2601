@@ -7,7 +7,12 @@
 public class GasStationAttendant extends Employee implements Comparable<GasStationAttendant>
 {
     protected final double numberOfDollarsStolenPerDay;
-    private static final double OVERTIME_PAY_RATE = 1.5;
+
+    private static final String  DRESS_CODE                        = "uniform";
+    private static final boolean IS_PAID_SALARY                    = false;
+    private static final boolean POST_SECONDARY_EDUCATION_REQUIRED = false;
+    private static final String  WORK_VERB                         = "pump";
+    private static final double  OVER_TIME_PAY_RATE                = 1.5;
 
     /**
      * Constructs a GasStationAttendant with the given name and amount of money stolen per day.
@@ -15,9 +20,11 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
      * @param name the name of the gas station attendant.
      * @param numberOfDollarsStolenPerDay the amount of money stolen per day.
      */
-    public GasStationAttendant(final String name, final double numberOfDollarsStolenPerDay)
+    public GasStationAttendant(final String name,
+                               final double numberOfDollarsStolenPerDay)
     {
         super(name);
+
         this.numberOfDollarsStolenPerDay = numberOfDollarsStolenPerDay;
     }
 
@@ -27,34 +34,34 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
     @Override
     public String getDressCode()
     {
-        return "uniform";
+        return DRESS_CODE;
     }
 
     /**
-     * Determines whether the gas station attendant is paid or not.
+     * Indicates whether the gas station attendant is paid or not.
      */
     @Override
     public boolean isPaidSalary()
     {
-        return false;
+        return IS_PAID_SALARY;
     }
 
     /**
-     * Determines whether the gas station attendant requires post-secondary education. .
+     * Indicates whether the gas station attendant requires post-secondary education. .
      */
     @Override
     public boolean postSecondaryEducationRequired()
     {
-        return false;
+        return POST_SECONDARY_EDUCATION_REQUIRED;
     }
 
     /**
-     * Determines the work that the gas attendant does.
+     * Indicates the work that the gas attendant does.
      */
     @Override
     public String getWorkVerb()
     {
-        return "pump";
+        return WORK_VERB;
     }
 
     /**
@@ -63,7 +70,7 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
     @Override
     public double getOverTimePayRate()
     {
-        return OVERTIME_PAY_RATE;
+        return OVER_TIME_PAY_RATE;
     }
 
     /**
@@ -75,7 +82,7 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
     @Override
     public int compareTo(final GasStationAttendant other)
     {
-        return Double.compare(other.numberOfDollarsStolenPerDay, this.numberOfDollarsStolenPerDay);
+        return Double.compare(this.numberOfDollarsStolenPerDay, other.numberOfDollarsStolenPerDay);
     }
 
     /**
@@ -89,6 +96,7 @@ public class GasStationAttendant extends Employee implements Comparable<GasStati
     {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
+
         GasStationAttendant that = (GasStationAttendant) obj;
 
         return Double.compare(that.numberOfDollarsStolenPerDay, numberOfDollarsStolenPerDay) == 0;
